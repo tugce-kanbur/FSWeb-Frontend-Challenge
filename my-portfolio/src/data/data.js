@@ -11,114 +11,161 @@ import icon1 from "../assets/icons/twitter 1.png";
 import icon2 from "../assets/icons/codepen 1.png";
 import icon3 from "../assets/icons/at-sign 1.png";
 import icon4 from "../assets/icons/instagram 1.png";
-
-const heroData = {
-    heading: 'I am a Frontend Developer...',
-    description:
-        '...who likes to craft solid and scalable frontend products with great user experiences.',
-    image: '/src/assets/fotoğraflar/hero-right.png',
+import icon5 from "../assets/icons/github-dark.png";
+import icon6 from "../assets/icons/LinkedIn-dark.png";
+import icon7 from "../assets/icons/Vector.png";
+import icon8 from "../assets/icons/codepen-dark.png";
+import icon9 from "../assets/icons/at-sign-dark.png";
+import icon10 from "../assets/icons/instagram-dark.png";
+export const heroData = {
+    heading: {
+        en: "I am a Frontend Developer...",
+        tr: "Ben bir Frontend Geliştiricisiyim...",
+    },
+    description: {
+        en: "...who likes to craft solid and scalable frontend products with great user experiences.",
+        tr: "...sağlam ve ölçeklenebilir arayüz ürünleri üretmeyi ve harika kullanıcı deneyimleri sunmayı seviyorum.",
+    },
+    image: "/src/assets/fotoğraflar/hero-right.png",
     buttons: [
         {
-            label: 'Github',
-            icon: '/src/assets/icons/github.png',
-            url: 'https://github.com/',
+            label: { en: "Github", tr: "Github" },
+            iconLight: "/src/assets/icons/github.png",
+            iconDark: icon5,
+            url: "https://github.com/",
         },
         {
-            label: 'Linkedin',
-            icon: '/src/assets/icons/LinkedIn.png',
-            url: 'https://linkedin.com/',
+            label: { en: "Linkedin", tr: "Linkedin" },
+            iconLight: "/src/assets/icons/LinkedIn.png",
+            iconDark: icon6,
+            url: "https://linkedin.com/",
         },
     ],
 };
 
-export default heroData;
-export const skillsTitle = "Skills";
+export const skillsTitle = {
+    en: "Skills",
+    tr: "Yetenekler",
+};
+
 export const skillsData = [
-    { id: 1, title: "JAVASCRIPT", icon: javascript, alt: "javascript-icon" },
-    { id: 2, title: "REACT", icon: react, alt: "react-icon" },
-    { id: 3, title: "REDUX", icon: redux, alt: "redux-icon" },
-    { id: 4, title: "NODE", icon: node, alt: "node-icon" },
-    { id: 5, title: "VS CODE", icon: vs, alt: "vscode-icon" },
-    { id: 6, title: "FIGMA", icon: figma, alt: "figma-icon" },
+    { id: 1, title: { en: "JAVASCRIPT", tr: "JAVASCRIPT" }, icon: javascript, alt: "javascript-icon" },
+    { id: 2, title: { en: "REACT", tr: "REACT" }, icon: react, alt: "react-icon" },
+    { id: 3, title: { en: "REDUX", tr: "REDUX" }, icon: redux, alt: "redux-icon" },
+    { id: 4, title: { en: "NODE", tr: "NODE" }, icon: node, alt: "node-icon" },
+    { id: 5, title: { en: "VS CODE", tr: "VS KOD" }, icon: vs, alt: "vscode-icon" },
+    { id: 6, title: { en: "FIGMA", tr: "FIGMA" }, icon: figma, alt: "figma-icon" },
 ];
 
 export const profileData = {
-    title: "Profile",
+    title: {
+        en: "Profile",
+        tr: "Profil",
+    },
     basicInfo: {
-        sectionTitle: "Basic Information",
+        sectionTitle: {
+            en: "Basic Information",
+            tr: "Temel Bilgiler",
+        },
         details: [
-            { label: "Date of bBirth", value: "24.03.1996" },
-            { label: "Home City", value: "Ankara" },
-            { label: "Education Status", value: "Hacettepe Üniv. Biyoloji\nLisans, 2016" },
-            { label: "Prefered Role", value: "Frontend, UI" }
-        ]
+            { label: { en: "Date of Birth", tr: "Doğum Tarihi" }, value: "24.03.1996" },
+            { label: { en: "Home City", tr: "Şehir" }, value: "Ankara" },
+            { label: { en: "Education Status", tr: "Eğitim Durumu" }, value: "Hacettepe Üniv. Biyoloji\nLisans, 2016" },
+            { label: { en: "Prefered Role", tr: "Tercih Edilen Rol" }, value: "Frontend, UI" },
+        ],
     },
     about: {
-        title: "About Me",
+        title: {
+            en: "About Me",
+            tr: "Hakkımda",
+        },
         paragraphs: [
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-            "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!"
+            {
+                en: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+                tr: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+            },
+            {
+                en: "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+                tr: "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+            },
         ],
-        image: image2
-    }
+        image: image2,
+    },
 };
 
-export const projectsHeader = "Projects";
+export const projectsHeader = {
+    en: "Projects",
+    tr: "Projeler",
+};
 
 export const projectsData = [
     {
         id: 1,
-        title: "Workintech",
-        description:
-            "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+        title: { en: "Workintech", tr: "Workintech" },
+        description: {
+            en: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+            tr: "Kullanıcıların kabul edeceği veya reddedeceği çerezleri seçmesini sağlayan basit, özelleştirilebilir bir eklenti. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur. NPM paketi olarak sunulmakta ve GitHub üzerinden tamamen özelleştirilebilir.",
+        },
         tags: ["react", "redux", "vercel"],
         image: image3,
         links: {
             live: "https://your-workintech-live-link.com",
-            github: "https://github.com/your-username/workintech"
-        }
+            github: "https://github.com/your-username/workintech",
+        },
     },
     {
         id: 2,
-        title: "Journey",
-        description:
-            "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+        title: { en: "Journey", tr: "Yolculuk" },
+        description: {
+            en: "A simple, customizable, minimal setup cookie plugin that allows your users to select which cookies to accept or decline. This was created with vanilla JS, SCSS and Parcel Bundler and is available as a NPM package and the git repository makes any type of customization to code and themes possible.",
+            tr: "Kullanıcıların kabul edeceği veya reddedeceği çerezleri seçmesini sağlayan basit, özelleştirilebilir bir eklenti. Vanilla JS, SCSS ve Parcel Bundler ile oluşturulmuştur. NPM paketi olarak sunulmakta ve GitHub üzerinden tamamen özelleştirilebilir.",
+        },
         tags: ["react", "redux", "vercel"],
         image: image4,
         links: {
             live: "https://your-journey-live-link.com",
-            github: "https://github.com/your-username/journey"
-        }
-    }
+            github: "https://github.com/your-username/journey",
+        },
+    },
 ];
 
 export const contactData = {
-    title: "Send me a message!",
-    description: "Got a question or proposal, or just want to say hello? Go ahead.",
+    title: {
+        en: "Send me a message!",
+        tr: "Bana bir mesaj gönder!",
+    },
+    description: {
+        en: "Got a question or proposal, or just want to say hello? Go ahead.",
+        tr: "Bir sorunuz, teklifiniz mi var ya da sadece selam mı vermek istediniz? Hadi yazın!",
+    },
     email: "almilasucode@gmail.com",
     icons: [
         {
             id: 1,
             name: "Twitter",
-            icon: icon1,
+            iconLight: icon1,
+            iconDark: icon7,
             link: "https://twitter.com/almilasucode",
         },
         {
             id: 2,
             name: "Codepen",
-            icon: icon2,
+            iconLight: icon2,
+            iconDark: icon8,
             link: "https://codepen.io/almilasucode",
         },
         {
             id: 3,
             name: "At Sign",
-            icon: icon3,
+            iconLight: icon3,
+            iconDark: icon9,
             link: "mailto:almilasucode@gmail.com",
         },
         {
             id: 4,
             name: "Instagram",
-            icon: icon4,
+            iconLight: icon4,
+            iconDark: icon10,
             link: "https://instagram.com/almilasucode",
         },
     ],

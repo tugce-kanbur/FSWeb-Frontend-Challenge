@@ -5,27 +5,27 @@ import Skills from './components/Skills';
 import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
+import { LanguageProvider } from './context/LanguageContext';
+import { DarkModeProvider } from './context/DarkModeContext';
+import { ToastContainer } from "react-toastify";
+
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <div>
-        <Hero />
-      </div>
-      <div>
-        <Skills />
-      </div>
-      <div>
-        <About />
-      </div>
-      <div>
-        <Projects />
-      </div>
-      <div >
-        <Footer />
-      </div>
-    </div>
+    <DarkModeProvider>
+      <LanguageProvider>
+        <div>
+          <Hero />
+          <Skills />
+          <About />
+          <Projects />
+          <Footer />
+          <ToastContainer position="top-center" />
+        </div>
+      </LanguageProvider>
+    </DarkModeProvider>
   )
 }
 

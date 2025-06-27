@@ -1,5 +1,6 @@
 import { createContext, useContext } from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
+import { toast } from "react-toastify";
 
 const LanguageContext = createContext();
 
@@ -7,8 +8,12 @@ export const LanguageProvider = ({ children }) => {
     const [language, setLanguage] = useLocalStorage("language", "en");
 
     const toggleLanguage = () => {
-        setLanguage(prev => (prev === "en" ? "tr" : "en"));
+        const newLang = language === "en" ? "tr" : "en";
+        setLanguage(newLang);
+        toast.success(newLang === "en" ? "Language set to English" : "Dil Türkçe olarak ayarlandı");
     };
+
+
 
     return (
         <LanguageContext.Provider value={{ language, toggleLanguage }}>

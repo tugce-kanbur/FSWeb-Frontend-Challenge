@@ -1,12 +1,17 @@
 import React, { createContext, useContext } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
+import { toast } from 'react-toastify';
+
 export const DarkModeContext = createContext();
 
 export function DarkModeProvider({ children }) {
-    const [darkMode, setDarkMode] = useLocalStorage("dark", false);
+    const [darkMode, setDarkMode] = useLocalStorage("light", false);
     const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
+        const newMode = !darkMode;
+        setDarkMode(newMode);
+        toast.info(newMode ? "Karanlık mod aktif" : "Aydınlık mod aktif");
     };
+
 
     return (
         <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
@@ -15,9 +20,6 @@ export function DarkModeProvider({ children }) {
     )
 }
 
-export function DarkModeContex() {
-    return useContext(DarkModeContex);
-}
 
 export const useDarkMode = () => useContext(DarkModeContext);
 
