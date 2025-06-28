@@ -10,6 +10,11 @@ module.exports = {
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
+      screens: {
+        "xs": "425px",
+        "sm": "640px",
+        "md": "767px",
+      },
       colors: {
         primary: "#4731D3",
         secondary: "#CBF281",
