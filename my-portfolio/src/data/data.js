@@ -117,7 +117,7 @@ export const projectsData = [
         tags: ["react", "redux", "vercel"],
         image: image3,
         links: {
-            live: "https://your-workintech-live-link.com",
+            live: "https://fs-web-frontend-challenge-8nnr.vercel.app",
             github: "https://github.com/tugce-kanbur?tab=repositories",
         },
     },
@@ -131,7 +131,7 @@ export const projectsData = [
         tags: ["react", "redux", "vercel"],
         image: image4,
         links: {
-            live: "https://your-workintech-live-link.com",
+            live: "https://fs-web-frontend-challenge-8nnr.vercel.app",
             github: "https://github.com/tugce-kanbur?tab=repositories",
         },
     },
