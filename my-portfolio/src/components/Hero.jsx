@@ -9,7 +9,7 @@ export default function Hero() {
     const { darkMode } = useDarkMode();
 
     return (
-        <section className="w-[1440px] h-[671px] flex font-Inter md:px-[60px]">
+        <section className="w-[1376px] h-[671px] flex font-Inter">
 
             <div className="flex-1 bg-primary dark:bg-[#171043] text-white p-12 ">
                 <Header />
