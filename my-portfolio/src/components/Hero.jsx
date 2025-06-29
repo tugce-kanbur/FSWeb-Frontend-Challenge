@@ -93,7 +93,7 @@ export default function Hero() {
                         ))}
                     </div>
 
-                    {/* Mobil Görsel */}
+
                     <div className="flex justify-center mt-8">
                         <img
                             src={heroData.image}

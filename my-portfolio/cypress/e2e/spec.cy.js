@@ -39,7 +39,7 @@ describe("Kişisel Portföy Testleri (data.js'e göre)", () => {
   });
 
   it("Dark mode aktifken ikonlar değişiyor", () => {
-    cy.get("input[type='checkbox']").click({ force: true });
+    cy.get('input[type="checkbox"]').first().click({ force: true });
 
     cy.get("a:contains('Github') img")
       .should("have.attr", "src")
@@ -51,7 +51,7 @@ describe("Kişisel Portföy Testleri (data.js'e göre)", () => {
   });
 
   it("Dil değişimi sonrası Türkçe içerik görünür", () => {
-    cy.contains("TÜRKÇE’YE GEÇ").click();
+    cy.contains("TÜRKÇE’YE GEÇ").click({ force: true });
     cy.contains("Ben bir Frontend").should("exist");
     cy.contains("Geliştiricisiyim...").should("exist");
     cy.contains("ölçeklenebilir arayüz ürünleri").should("exist");
